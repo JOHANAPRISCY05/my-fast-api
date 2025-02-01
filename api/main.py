@@ -8,7 +8,7 @@ with open("q-vercel-python.json", "r") as f:
     data = json.load(f)
 
 async def get_marks(name: List[str]):
-     marks = [data.get(n, None)for in name]
+     marks = [data.get(n, None)for n in name]
      return{"marks": marks}
 
 from fastapi.middleware.cors import CORSMiddleware
